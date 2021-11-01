@@ -2,16 +2,27 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MixChart/>
+    <EChart/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import MixChart from "@/components/MixChart";
+import EChart from "@/components/EChartDemo";
+
+import VueCompositionAPI from '@vue/composition-api'
+import Vue from "vue";
+
+Vue.use(VueCompositionAPI)
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EChart,
+    HelloWorld,
+    MixChart
   }
 }
 </script>
